@@ -1,4 +1,4 @@
-package com.sort;
+package com.etc;
 
 public class PermutationPratice {
 

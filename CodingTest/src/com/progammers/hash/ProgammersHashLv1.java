@@ -1,4 +1,4 @@
-package com.sort;
+package com.progammers.hash;
 
 /**
 코딩테스트 연습 > 해시 > 완주하지 못한 선수

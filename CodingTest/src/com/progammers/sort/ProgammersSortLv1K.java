@@ -1,4 +1,4 @@
-package com.sort;
+package com.progammers.sort;
 
 /**
 
@@ -28,7 +28,7 @@ array	commands	return
  */
 
 import java.util.*;
-public class ProgammersSortK {
+public class ProgammersSortLv1K {
 	
 	public static void main(String args[]) {
 		
