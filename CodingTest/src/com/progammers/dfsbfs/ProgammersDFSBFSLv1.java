@@ -2,6 +2,9 @@ package com.progammers.dfsbfs;
 
 /**
 
+* refer - https://lkhlkh23.tistory.com/74
+* refer - https://saltae.tistory.com/11
+
 코딩테스트 연습 > 깊이/너비 우선 탐색(DFS/BFS) > 타겟 넘버
 
 문제 설명
@@ -28,7 +31,13 @@ numbers				target	return
 [1, 1, 1, 1, 1]		3		5
 
 */
+
 public class ProgammersDFSBFSLv1 {
+	
+	
+	static int total_Len;
+	static int targetNum;
+    static int count;
 	
 	public static void main(String args[]) {
 		
@@ -45,14 +54,27 @@ public class ProgammersDFSBFSLv1 {
 	}
 	
     public int solution(int[] numbers, int target) {
-        int answer = 0;
+    	total_Len = numbers.length;
+        targetNum = target;
+        count = 0;
+        DFS(0,0,numbers);
+        int answer = count;
         return answer;
     }
-		
-	
-	
-	
-	
+
+    public static void DFS(int flag,int sum, int[] compNum){
+        if(flag==total_Len){
+            if(targetNum==sum){
+                count++;
+                return;
+            }else{
+                return;
+            }
+        }
+        int tmpNum = compNum[flag];
+        DFS(flag+1,sum+tmpNum,compNum);
+        DFS(flag+1,sum-tmpNum,compNum);
+    }		
 }
 	
 
