@@ -52,10 +52,19 @@ public class ProgammersHashLv2 {
 	}
 	
 	public boolean solution(String[] phone_book) {
-		boolean answer = true;
-		return answer;
+		for(int i=0;i<phone_book.length-1;i++) {
+			for(int k=i+1;k<phone_book.length;k++) {
+				if(phone_book[i].startsWith(phone_book[k])) {return false;}
+				if(phone_book[k].startsWith(phone_book[i])) {return false;}
+			}
+		}
+		return true;
 	}
 		
+	
+	
+	
+	
 }
 	
 
