@@ -62,16 +62,18 @@ public class ProgammersDFSBFSLv1 {
         return answer;
     }
 
-    public static void DFS(int flag,int sum, int[] compNum){
+    public static void DFS(int flag, int sum, int[] compNum){
+    	System.out.println("flag : " + flag + " / sum : " + sum);
         if(flag==total_Len){
             if(targetNum==sum){
                 count++;
             }
+            System.out.println("--------------------------------");
             return;
         }
         int tmpNum = compNum[flag];
-        DFS(flag+1,sum+tmpNum,compNum);
-        DFS(flag+1,sum-tmpNum,compNum);
+        DFS(flag+1, sum+tmpNum, compNum);
+        DFS(flag+1, sum-tmpNum, compNum);
     }		
 }
 	
