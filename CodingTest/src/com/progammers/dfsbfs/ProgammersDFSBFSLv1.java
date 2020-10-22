@@ -66,10 +66,8 @@ public class ProgammersDFSBFSLv1 {
         if(flag==total_Len){
             if(targetNum==sum){
                 count++;
-                return;
-            }else{
-                return;
             }
+            return;
         }
         int tmpNum = compNum[flag];
         DFS(flag+1,sum+tmpNum,compNum);
